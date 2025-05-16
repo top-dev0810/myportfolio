@@ -1,6 +1,3 @@
-// script.js
-
-// Wait for document to load
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS animation with mobile optimization
     AOS.init({
@@ -214,11 +211,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const bar = entry.target;
-                        const width = bar.getAttribute('style').split(':')[1];
+                        const width = bar.getAttribute('data-width'); // Use data-width attribute
 
-                        bar.style.width = '0';
+                        bar.style.width = '0'; // Start at 0
                         setTimeout(() => {
-                            bar.style.width = width;
+                            bar.style.width = `${width}%`; // Animate to target width
                         }, 100);
 
                         observer.unobserve(bar);

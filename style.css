@@ -317,28 +317,40 @@ section {
 
 /* Projects Section */
 .project-item {
-    margin-bottom: 30px;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-item.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-img {
     position: relative;
+    overflow: hidden;
 }
 
 .project-img img {
     width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Prevent stretching */
     border-radius: 16px 16px 0 0;
     transition: all 0.5s ease;
-    height: auto;
 }
 
 .project-content {
     padding: 20px;
     background-color: white;
     border-radius: 0 0 16px 16px;
+    flex-grow: 1; /* Ensure content stretches to fill card */
+    display: flex;
+    flex-direction: column;
+    min-height: 200px; /* Minimum height for content consistency */
 }
 
 .project-content h3 {
@@ -349,6 +361,7 @@ section {
 .project-content p {
     color: var(--gray);
     margin-bottom: 15px;
+    flex-grow: 1; /* Push button to bottom */
 }
 
 .project-tags {
@@ -1027,8 +1040,13 @@ section {
         font-size: 1.3rem;
     }
 
+    .project-img img {
+        height: 180px; /* Slightly smaller for tablets */
+    }
+
     .project-content {
         padding: 15px;
+        min-height: 180px;
     }
 
     .project-content h3 {
@@ -1135,6 +1153,14 @@ section {
 
     .service-card h3 {
         font-size: 1.2rem;
+    }
+
+    .project-img img {
+        height: 160px; /* Smaller for mobile */
+    }
+
+    .project-content {
+        min-height: 160px;
     }
 
     .project-content h3 {
@@ -1289,8 +1315,13 @@ section {
         font-size: 18px;
     }
 
+    .project-img img {
+        height: 140px; /* Smallest for mobile */
+    }
+
     .project-content {
         padding: 12px;
+        min-height: 140px;
     }
 
     .contact-form .form-control {
@@ -1327,7 +1358,7 @@ section {
         right: -280px; /* Start off-screen */
         width: 280px;
         height: 100%;
-        background-color: var(--dark);
+        background-color: white; /* Changed to white */
         transition: right 0.3s ease-in-out;
         z-index: 1000;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
@@ -1352,17 +1383,19 @@ section {
     }
 
     .navbar-nav .nav-link {
-        color: white;
+        color: var(--dark);
         font-size: 1.1rem;
         padding: 15px 20px;
         width: 100%;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
+        display: block; /* Ensure consistent size */
     }
 
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
         color: var(--highlight);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(5, 102, 141, 0.1); /* Consistent hover background */
+        padding: 15px 20px; /* Maintain padding */
     }
 
     .navbar-toggler {
@@ -1380,6 +1413,7 @@ section {
         visibility: hidden;
         transition: opacity 0.3s ease-in-out;
         z-index: 999;
+        cursor: pointer; /* Indicate clickable area */
     }
 
     .navbar-collapse.show ~ .navbar-backdrop {

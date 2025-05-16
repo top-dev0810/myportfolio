@@ -16,35 +16,35 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-        <!-- Loader with Rocket Animation -->
-<div class="loader">
-    <div class="stars-background"></div>
-    <div class="loader-container">
-        <div class="loader-logo">Welcome<span>&nbsp;Guys..!</span></div>
-        <div class="loader-animation">
-            <div class="rocket-wrapper">
-                <div class="rocket">
-                    <div class="rocket-nose"></div>
-                    <div class="rocket-body"></div>
-                    <div class="rocket-fin-left"></div>
-                    <div class="rocket-fin-right"></div>
-                    <div class="rocket-window"></div>
-                    <div class="rocket-exhaust-wrapper">
-                        <div class="rocket-exhaust"></div>
+    <!-- Loader with Rocket Animation -->
+    <div class="loader">
+        <div class="stars-background"></div>
+        <div class="loader-container">
+            <div class="loader-logo">Welcome<span> Guys..!</span></div>
+            <div class="loader-animation">
+                <div class="rocket-wrapper">
+                    <div class="rocket">
+                        <div class="rocket-nose"></div>
+                        <div class="rocket-body"></div>
+                        <div class="rocket-fin-left"></div>
+                        <div class="rocket-fin-right"></div>
+                        <div class="rocket-window"></div>
+                        <div class="rocket-exhaust-wrapper">
+                            <div class="rocket-exhaust"></div>
+                        </div>
                     </div>
                 </div>
+                <div class="launch-platform">
+                    <div class="launch-stand-left"></div>
+                    <div class="launch-stand-right"></div>
+                </div>
             </div>
-            <div class="launch-platform">
-                <div class="launch-stand-left"></div>
-                <div class="launch-stand-right"></div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
             </div>
+            <div class="loader-text">Preparing for takeoff...</div>
         </div>
-        <div class="loader-progress">
-            <div class="loader-progress-bar"></div>
-        </div>
-        <div class="loader-text">Preparing for takeoff...</div>
     </div>
-</div>
 
     <!-- Back to top button -->
     <a href="#" class="back-to-top">
@@ -85,6 +85,7 @@
             </div>
         </div>
     </nav>
+    <div class="navbar-backdrop"></div>
 
     <!-- Hero Section -->
     <section id="hero">
@@ -166,7 +167,7 @@
                             <h4>90%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 90%;"></div>
+                            <div class="skill-progress-bar" data-width="90"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -175,7 +176,7 @@
                             <h4>85%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 85%;"></div>
+                            <div class="skill-progress-bar" data-width="85"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -184,7 +185,7 @@
                             <h4>80%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 80%;"></div>
+                            <div class="skill-progress-bar" data-width="80"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -193,7 +194,7 @@
                             <h4>95%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 95%;"></div>
+                            <div class="skill-progress-bar" data-width="95"></div>
                         </div>
                     </div>
                 </div>
@@ -204,7 +205,7 @@
                             <h4>75%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 75%;"></div>
+                            <div class="skill-progress-bar" data-width="75"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -213,7 +214,7 @@
                             <h4>85%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 85%;"></div>
+                            <div class="skill-progress-bar" data-width="85"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -222,7 +223,7 @@
                             <h4>80%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 80%;"></div>
+                            <div class="skill-progress-bar" data-width="80"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -231,7 +232,7 @@
                             <h4>70%</h4>
                         </div>
                         <div class="skill-progress">
-                            <div class="skill-progress-bar" style="width: 70%;"></div>
+                            <div class="skill-progress-bar" data-width="70"></div>
                         </div>
                     </div>
                 </div>
@@ -312,11 +313,11 @@
                 <h2>My Projects</h2>
                 <p>Recent work I've done</p>
             </div>
-            <div class="row" data-aos="fade-up">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" data-aos="fade-up">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                            <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>E-commerce Platform</h3>
@@ -330,10 +331,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                            <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>Task Management App</h3>
@@ -347,10 +348,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                            <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>Fitness Tracker</h3>
@@ -364,10 +365,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                            <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Project 4" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>Weather Dashboard</h3>
@@ -381,10 +382,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 5">
+                            <img src="https://via.placeholder.com/600x400?text=Project+5" alt="Project 5" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>Social Media Clone</h3>
@@ -398,10 +399,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
+                <div class="col">
+                    <div class="project-item equal-height">
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400" alt="Project 6">
+                            <img src="https://via.placeholder.com/600x400?text=Project+6" alt="Project 6" class="img-fluid">
                         </div>
                         <div class="project-content">
                             <h3>AI Content Generator</h3>
@@ -572,7 +573,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 JohnDev. All Rights Reserved.</p>
+                <p>© 2025 JohnDev. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
