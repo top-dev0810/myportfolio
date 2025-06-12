@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize Typed.js with mobile-optimized settings
     const typed = new Typed('#typed-text', {
-        strings: ['Software Engineer', 'Web Developer', 'Mobile App Developer', 'UI/UX Designer'],
+        strings: ['Full Stack Developer', 'Mobile App Developer'],
         typeSpeed: window.innerWidth < 576 ? 60 : 80, // Slower typing on mobile
         backSpeed: window.innerWidth < 576 ? 30 : 40,
         backDelay: 1500,
